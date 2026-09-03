@@ -12,8 +12,9 @@ public class BankAccount {
     }
 
     public boolean withdraw(double amount) {
-        if (balance - amount >= 50){
-            balance -= amount;
+        if (balance - amount >= 50) {
+            balance = (balance - amount) - 2;   //deduct $2 fee for withdrawal
+
             return true;
         }
 
